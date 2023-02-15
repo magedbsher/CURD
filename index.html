@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container py-5 ">
+        <h1 class="mx-auto">project managment sys</h1>
+        <div class="w-50 mx-auto py-5">
+            <div class="form-group mb-3">
+                <label for="productName" class="mb-2"> product Name</label>
+                <input type="text" id="productName" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="productPrice" class="mb-2"> product price</label>
+                <input type="text" id="productPrice" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="productCategory" class="mb-2"> product category</label>
+                <input type="text" id="productCategory" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="productDesc" class="mb-2"> product desc</label>
+
+                <textarea name="productDesc" id="productDesc" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <button id="addProductBtn" onclick="addProduct()" class="btn btn-primary">Add product</button>
+            <button id="UpdateProductBtn" onclick="UpdateProduct()" class="btn btn-warning d-none">Update
+                product</button>
+
+        </div>
+        <div class="w-50 mx-auto py-5">
+            <div class="form-group mb-3 ">
+                <label for="productSearch" class="mb-2"> search</label>
+                <input type="text" id="productSearch" class="form-control" oninput="searchByName(this.value)">
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>ProducNname</th>
+                        <th>ProductPrice</th>
+                        <th>ProductCategory</th>
+                        <th>ProductDesc</th>
+                        <th>Upload</th>
+                        <th>Delete</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="productData">
+
+                </tbody> 
+             </table>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>
